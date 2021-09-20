@@ -1,0 +1,37 @@
+.videos_addvideo-btn {
+  padding: 1.5rem 0 1.5rem 2rem;
+}
+
+.videos_addvideo-btn button {
+  background: fff;
+  border-radius: 5px;
+  height: 50px;
+  font-size: 1.2rem;
+  font-style: oblique;
+}
+
+.videos_addvideo-btn button:hover {
+  background: #777171;
+}
+
+.videos_section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.videos_section_video {
+  width: 22rem;
+  height: auto;
+  margin: 2rem 2rem 2rem 2rem;
+  border-radius: 1rem;
+}
+
+.videos_section_video .react_player {
+  padding: 2rem 0 0 0;
+}
+/*# sourceMappingURL=videos.css.map */

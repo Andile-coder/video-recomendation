@@ -1,0 +1,31 @@
+$primary-btn: red;
+$secondary-btn: blue;
+.videos {
+  &_addvideo-btn {
+    padding: 1.5rem 0 1.5rem 2rem;
+    button {
+      background: fff;
+      border-radius: 5px;
+      height: 50px;
+      font-size: 1.2rem;
+      font-style: oblique;
+      &:hover {
+        background: rgb(119, 113, 113);
+      }
+    }
+  }
+  &_section {
+    display: flex;
+    flex-flow: row wrap;
+
+    &_video {
+      width: 22rem;
+      height: auto;
+      margin: 2rem 2rem 2rem 2rem;
+      border-radius: 1rem;
+      .react_player {
+        padding: 2rem 0 0 0;
+      }
+    }
+  }
+}

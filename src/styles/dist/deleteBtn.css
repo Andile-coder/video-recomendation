@@ -1,0 +1,12 @@
+button {
+  background: fff;
+  border-radius: 5px;
+  height: 50px;
+  font-size: 1.2rem;
+  font-style: oblique;
+}
+
+button:hover {
+  background: #777171;
+}
+/*# sourceMappingURL=deleteBtn.css.map */

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,MAAM,CAAC;EACL,UAAU,EAAE,GAAG;EACf,aAAa,EAAE,GAAG;EAClB,MAAM,EAAE,IAAI;EACZ,SAAS,EAAE,MAAM;EACjB,UAAU,EAAE,OAAO;CAIpB;;AATD,AAME,MANI,AAMH,MAAM,CAAC;EACN,UAAU,EAAE,OAAkB;CAC/B",
+    "sources": [
+        "../deleteBtn.scss"
+    ],
+    "names": [],
+    "file": "deleteBtn.css"
+}

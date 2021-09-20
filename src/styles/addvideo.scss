@@ -1,0 +1,31 @@
+.addVideo {
+  justify-content: center;
+  margin: 2rem;
+  padding: 2rem;
+
+  &_form {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    flex-flow: column wrap;
+    label {
+      padding-bottom: 2rem;
+      font-size: large;
+      input {
+        height: 2rem;
+        width: 70vw;
+        border-radius: 0.2rem;
+      }
+    }
+  }
+  button {
+    background: fff;
+    border-radius: 5px;
+    height: 50px;
+    font-size: 1.2rem;
+    font-style: oblique;
+    &:hover {
+      background: rgb(119, 113, 113);
+    }
+  }
+}

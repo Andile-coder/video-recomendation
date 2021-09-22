@@ -1,22 +1,17 @@
-// video_getAll, video_add,video_deleteByid, video_updateRating
 const express = require("express");
+require("dotenv").config();
 const { Pool } = require("pg");
 const app = express();
 const pool = new Pool({
-  user: "andilemasela",
-  host: "localhost",
-  database: "cyf_videos",
-  password: "Masela@2018",
-  port: 5432,
+  user: process.env.PGUSER,
+  host: process.env.PGHOST,
+  database: process.env.PGDATABASE,
+  password: process.env.PGPASSWORD,
+  port: process.env.PGPORT,
 });
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE");
-  res.setHeader("Access-Control-Allow-Headers", "*");
-  res.setHeader("Access-Control-Allow-Headers", "*");
-  next();
-});
+
 app.use(express.json());
+
 const video_getAll = (req, res) => {
   pool.query("SELECT * FROM videos", (error, result) => {
     res.json(result.rows);

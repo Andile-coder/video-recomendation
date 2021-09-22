@@ -7,13 +7,22 @@ function AddVideo() {
   const [data, setData] = useState({ title: "", url: "" });
   const Submit = (e) => {
     e.preventDefault();
-
-    async function createPost() {
-      axios
-        .post("http://localhost:3000/", { data: data })
-        .catch((e) => console.log(e));
+    if (!data.title.trim() || !data.url.trim()) {
+      alert("All fields are mandatory");
+    } else {
+      const p =
+        /^(?:https?:\/\/)?(?:m\.|www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
+      if (!data.url.match(p)) {
+        alert("Please enter a youtube valid url");
+      } else {
+        async function createPost() {
+          axios
+            .post("http://localhost:3000/", { data: data })
+            .catch((e) => console.log(e));
+        }
+        createPost();
+      }
     }
-    createPost();
   };
   return (
     <div className="addVideo">

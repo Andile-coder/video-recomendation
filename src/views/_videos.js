@@ -16,7 +16,6 @@ function Videos() {
     async function fetchData() {
       const request = await axios
         .get("http://localhost:3000/")
-
         .catch((e) => console.error(e));
       setVideos(request.data);
     }

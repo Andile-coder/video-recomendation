@@ -15,7 +15,7 @@ function Videos() {
   useEffect(() => {
     async function fetchData() {
       const request = await axios
-        .get("http://localhost:3000/")
+        .get("https://video-recomend.herokuapp.com/")
         .catch((e) => console.error(e));
       setVideos(request.data);
     }

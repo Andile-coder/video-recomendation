@@ -1,5 +1,4 @@
 import { React, useState } from "react";
-// import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp, faThumbsDown } from "@fortawesome/free-regular-svg-icons";
 
@@ -9,14 +8,18 @@ function Rating(props) {
 
   const handleUpVote = () => {
     axios
-      .put(`http://localhost:3000/${props.id}`, { rating_value: +1 })
+      .put(`https://video-recomend.herokuapp.com/${props.id}`, {
+        rating_value: +1,
+      })
       .catch((e) => console.error(e));
     setRating(rating + 1);
   };
 
   const handleDownVote = () => {
     axios
-      .put(`http://localhost:3000/${props.id}`, { rating_value: -1 })
+      .put(`https://video-recomend.herokuapp.com/${props.id}`, {
+        rating_value: -1,
+      })
       .catch((e) => console.error(e));
     setRating(rating - 1);
   };

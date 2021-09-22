@@ -17,7 +17,7 @@ function AddVideo() {
       } else {
         async function createPost() {
           axios
-            .post("http://localhost:3000/", { data: data })
+            .post("https://video-recomend.herokuapp.com/", { data: data })
             .catch((e) => console.log(e));
         }
         createPost();
